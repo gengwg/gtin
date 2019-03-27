@@ -14,6 +14,8 @@ Make sure to use ``host="0.0.0.0"`` in `app.py` when using Docker, otherwise see
 
 ## Examples
 
+Default is 12 digits:
+
 ```bash
 $ curl -i -H "Content-Type: application/json" -X POST -d '{"upc":"7447010150"}' http://localhost:5000/gtin/api/v1.0/convert
 HTTP/1.0 201 CREATED
@@ -26,7 +28,11 @@ Date: Wed, 27 Mar 2019 01:40:17 GMT
       "gtin": "074470101505"
           
 }
+```
 
+However Can convert to any GTIN. You can specify the length in the payload. For example, for 14 digit GTIN.
+
+```bash
 $ curl -i -H "Content-Type: application/json" -X POST -d '{"upc":"7447010150", "length":14}' http://localhost:5000/gtin/api/v1.0/convert
 HTTP/1.0 201 CREATED
 Content-Type: application/json
@@ -38,7 +44,9 @@ Date: Wed, 27 Mar 2019 01:40:28 GMT
       "gtin": "00074470101505"
           
 }
+```
 
+```
 $ curl -i -H "Content-Type: application/json" -X POST -d '{"upc":"63050947716"}' http://10.46.39.75:5000/gtin/api/v1.0/convert
 HTTP/1.0 201 CREATED
 Content-Type: application/json
