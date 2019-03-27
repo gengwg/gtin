@@ -40,3 +40,21 @@ Date: Wed, 27 Mar 2019 01:40:28 GMT
 }
 
 ```
+
+## Notes
+
+Had to upgrade python from alpine to stretch.
+
+```
+-FROM python:3.4-alpine
++FROM python:3.7-stretch
+```
+
+Alpine seems not working with Centos 7, with Docker 1.12.
+
+```
+CentOS Linux release 7.3.1611 (Core)
+3.10.0-514.26.2.el7.x86_64
+$ docker --version
+Docker version 1.12.6, build 88a4867/1.12.6
+```
