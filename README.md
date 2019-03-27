@@ -6,8 +6,11 @@ Can specify length in JSON request. Default to GTIN `12`.
 ## Usage
 
 ```
-python app.py
+sudo docker-compose up --build
 ```
+
+Make sure to use ``host="0.0.0.0"`` in `app.py` when using Docker, otherwise seems not working.
+
 
 ## Examples
 
