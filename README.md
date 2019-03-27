@@ -39,6 +39,17 @@ Date: Wed, 27 Mar 2019 01:40:28 GMT
           
 }
 
+$ curl -i -H "Content-Type: application/json" -X POST -d '{"upc":"63050947716"}' http://10.46.39.75:5000/gtin/api/v1.0/convert
+HTTP/1.0 201 CREATED
+Content-Type: application/json
+Content-Length: 29
+Server: Werkzeug/0.15.1 Python/3.7.2
+Date: Wed, 27 Mar 2019 22:00:10 GMT
+
+{
+  "gtin": "630509477166"
+}
+
 ```
 
 ## Notes
