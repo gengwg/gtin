@@ -2,6 +2,12 @@
 
 REST API to Convert UPC number to valid GTINs ("Global Trade Item Numbers")
 
+## Usage
+
+```
+python app.py
+```
+
 ## Examples
 
 ```bash
