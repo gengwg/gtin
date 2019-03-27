@@ -12,8 +12,8 @@ def not_found(error):
 def convert_upc_to_gtin():
     if not request.json or not 'upc' in request.json:
         abort(400)
+    #print (request.json)
     upc = request.json['upc']
-    print (request.json)
     length = request.json['length'] if 'length' in request.json else 12
     res = str(GTIN(raw=request.json['upc'], length=length))
 

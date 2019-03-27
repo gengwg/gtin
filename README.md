@@ -1,6 +1,7 @@
 # gtin
 
-REST API to Convert UPC number to valid GTINs ("Global Trade Item Numbers")
+REST API to Convert UPC number to valid GTINs ("Global Trade Item Numbers"). 
+Can specify length in JSON request. Default to GTIN `12`. 
 
 ## Usage
 
